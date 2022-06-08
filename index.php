@@ -181,6 +181,16 @@ $dbfaqs = [
         i{
             font-size: 20px;
         }
+        .footer-ul,.footer-ul i, .footer-ul span{
+            font-size: 12px;
+        }
+        ul.container-sc{
+            padding: 10px;
+        }
+        footer{
+            background-color: #f5f5f5;
+        }
+        
     </style>
 </head>
 <body>
@@ -216,5 +226,21 @@ $dbfaqs = [
         
     </main>
     <!-- END MAIN  -->
+
+    <!-- FOOTER  -->
+    <footer>
+        <ul class="container-sc d-flex justify-content-between footer-ul">
+            <li class="no-style" >
+                <span>Google Tutto su Google PrivacyTermini</span>
+            </li>
+            <li class="no-style">
+                <i class="fa-solid fa-globe "></i>
+                <select>
+                    <option value="italiano">Italiano</option>
+                </select>
+            </li>
+        </ul>
+    </footer>
+    <!-- ENDFOOTER  -->
 </body>
 </html>
