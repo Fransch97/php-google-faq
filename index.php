@@ -19,7 +19,7 @@ $dbfaqs = [
         'question' => "Come state implementando la recente decisione della Corte di giustizia dell'Unione europea (CGUE) relativa al diritto all'oblio?",
         'answer' => '
         <p>
-            La recente <a href="#">decisione della Corte di giustizia dell\' Unione europea </a> ha profonde conseguenze per i motori di ricerca in Europa. La Corte ha stabilito che alcuni utenti hanno il diritto di chiedere ai motori di ricerca come Google di rimuovere risultati relativi a chiavi di ricerca che includono il proprio nome. Per poter essere rimossi, i risultati visualizzati devono essere inadeguati, irrilevanti o non più rilevanti, o eccessivi.
+            La recente <a href="#">decisione della Corte di giustizia dell\' Unione europea</a> ha profonde conseguenze per i motori di ricerca in Europa. La Corte ha stabilito che alcuni utenti hanno il diritto di chiedere ai motori di ricerca come Google di rimuovere risultati relativi a chiavi di ricerca che includono il proprio nome. Per poter essere rimossi, i risultati visualizzati devono essere inadeguati, irrilevanti o non più rilevanti, o eccessivi.
         </p>
 
         <p>
@@ -89,9 +89,9 @@ $dbfaqs = [
             Tieni presente che i servizi Google sono fondamentalmente gli stessi a prescindere dalla società consociata che li offre o dal paese a cui è associato il tuo account.
         </p>
 
-        <h4>
+        <h5>
             Stabilire il paese associato al tuo account
-        </h4>
+        </h5>
         
         <p>
             Tieni presente che i servizi Google sono fondamentalmente gli stessi a prescindere dalla società consociata che li offre o dal paese a cui è associato il tuo account.
@@ -141,6 +141,26 @@ $dbfaqs = [
             padding: 0;
             border-bottom: 1px solid lightgrey;
         }
+        .container-sc{
+            margin: auto;
+            max-width: 1042px;
+            padding: 32px;
+
+        }
+        h1{
+            font-size: 1.5rem;
+            font-weight: 600;
+            padding-top: 50px;
+        }
+        p{
+            font-size: 0.9rem;
+            font-weight: 600;
+            padding-top: 20px;
+        }
+        h5{
+            padding-top: 50px;
+            font-weight: 600;
+        }
     </style>
 </head>
 <body>
@@ -156,10 +176,13 @@ $dbfaqs = [
 
     <!-- MAIN  -->
     <main>
-        <?php foreach($dbfaqs as $faq) : ?>
-        <h4><?php echo $faq['question'] ?></h4>
-        <?php echo $faq['answer'] ?>
-        <?php endforeach;?>
+        <div class="container-sc">
+
+            <?php foreach($dbfaqs as $faq) : ?>
+            <h1><?php echo $faq['question'] ?></h1>
+            <?php echo $faq['answer'] ?>
+            <?php endforeach;?>
+        </div>
         
     </main>
     <!-- END MAIN  -->
