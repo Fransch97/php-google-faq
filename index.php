@@ -16,7 +16,7 @@ $dblinks = [
 $dbfaqs = [
 
     [
-        'quest' => "Come state implementando la recente decisione della Corte di giustizia dell'Unione europea (CGUE) relativa al diritto all'oblio?",
+        'question' => "Come state implementando la recente decisione della Corte di giustizia dell'Unione europea (CGUE) relativa al diritto all'oblio?",
         'answer' => '
         <p>
             La recente <a href="#">decisione della Corte di giustizia dell\' Unione europea </a> ha profonde conseguenze per i motori di ricerca in Europa. La Corte ha stabilito che alcuni utenti hanno il diritto di chiedere ai motori di ricerca come Google di rimuovere risultati relativi a chiavi di ricerca che includono il proprio nome. Per poter essere rimossi, i risultati visualizzati devono essere inadeguati, irrilevanti o non più rilevanti, o eccessivi.
@@ -133,16 +133,33 @@ $dbfaqs = [
     <link rel="shortcut icon" href="./img/google-flat.png" type="image/x-icon">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+    <style>
+        li.no-style{
+            list-style: none;
+        }
+        ul{
+            padding: 0;
+            border-bottom: 1px solid lightgrey;
+        }
+    </style>
 </head>
 <body>
     <!-- HEADER  -->
     <header>
-
+        <ul class="d-flex">
+            <?php foreach($dblinks as $link) :?>
+                <li class="mx-4 py-2 no-style"><?php echo $link ?></li>
+            <?php endforeach;?>
+        </ul>
     </header>
     <!--END HEADER  -->
 
     <!-- MAIN  -->
     <main>
+        <?php foreach($dbfaqs as $faq) : ?>
+        <h4><?php echo $faq['question'] ?></h4>
+        <?php echo $faq['answer'] ?>
+        <?php endforeach;?>
         
     </main>
     <!-- END MAIN  -->
